@@ -1,0 +1,2 @@
+defmodule Xkcd do
+end
