@@ -2,6 +2,10 @@
 
 ![](http://i.imgur.com/kTRCjZh.png)
 
+[![Hex.pm](https://img.shields.io/hexpm/l/xkcd.svg)](https://hex.pm/packages/xkcd)
+[![Hex.pm](https://img.shields.io/hexpm/v/xkcd.svg)](https://hex.pm/packages/xkcd)
+[![Hex.pm](https://img.shields.io/hexpm/dt/xkcd.svg)](https://hex.pm/packages/xkcd)
+
 Uses the [XKCD](https://xkcd.com/965/) JSON API to retrieve a random, specific or the latest comic
 
 ## Installation
