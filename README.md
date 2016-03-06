@@ -20,3 +20,15 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [applications: [:xkcd]]
         end
 
+## Usage
+
+```elixir
+iex> Xkcd.latest
+{:ok, %Xkcd.Comic{...}}
+
+iex> Xkcd.random
+{:ok, %Xkcd.Comic{...}}
+
+iex> Xkcd.number(256)
+{:ok, %Xkcd.Comic{...}}
+```
