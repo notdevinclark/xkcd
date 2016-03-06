@@ -8,7 +8,7 @@ defmodule Xkcd do
 
   @doc """
   Takes a number from 1 to the latest and returns a tuple with with :ok and a
-  comic struct or an :error atom and a error message
+  comic struct or an :error atom and an error message
 
   Example:
 
