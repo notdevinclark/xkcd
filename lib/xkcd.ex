@@ -2,9 +2,10 @@ defmodule Xkcd do
   @moduledoc """
   A client for the XKCD JSON API
   """
-
   alias Xkcd.Comic
   alias HTTPoison.Response
+
+  @base_url "https://xkcd.com"
 
   @doc """
   Takes a number from 1 to the latest and returns a tuple with with :ok and a
@@ -21,7 +22,7 @@ defmodule Xkcd do
   @spec number(integer) :: {:ok, Comic.t}
                          | {:error, String.t}
   def number(integer) do
-    "http://xkcd.com/#{integer}/info.0.json"
+    "#{@base_url}/#{integer}/info.0.json"
     |> get_comic
   end
 
@@ -36,7 +37,7 @@ defmodule Xkcd do
   """
   @spec latest :: {:ok, Comic.t}
   def latest do
-    "http://xkcd.com/info.0.json"
+    "#{@base_url}/info.0.json"
     |> get_comic
   end
 
@@ -58,7 +59,7 @@ defmodule Xkcd do
 
   defp get_comic(url) do
     url
-    |> HTTPoison.get
+    |> HTTPoison.get([], follow_redirect: true)
     |> get_body
     |> parse_body
   end
