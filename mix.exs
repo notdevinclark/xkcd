@@ -8,8 +8,8 @@ defmodule Xkcd.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "Uses the XKCD JSON API to retrieve the random, specific and the latest XKCD comic.",
-     package: package,
-     deps: deps,
+     package: package(),
+     deps: deps(),
      docs: [extras: ["README.md"]]]
   end
 
