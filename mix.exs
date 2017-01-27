@@ -3,13 +3,13 @@ defmodule Xkcd.Mixfile do
 
   def project do
     [app: :xkcd,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "Uses the XKCD JSON API to retrieve the random, specific and the latest XKCD comic.",
-     package: package,
-     deps: deps,
+     package: package(),
+     deps: deps(),
      docs: [extras: ["README.md"]]]
   end
 
