@@ -4,7 +4,7 @@ defmodule Xkcd.Mixfile do
   def project do
     [app: :xkcd,
      version: "0.0.2",
-     elixir: "~> 1.2",
+     elixir: "~> 1.5",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "Uses the XKCD JSON API to retrieve the random, specific and the latest XKCD comic.",
@@ -19,8 +19,8 @@ defmodule Xkcd.Mixfile do
 
   defp deps do
     [
-      {:poison, "~> 2.0"},
-      {:httpoison, "~> 0.8.0"},
+      {:poison, "~> 3.1"},
+      {:httpoison, "~> 0.13"},
       {:earmark, ">= 0.0.0", only: :dev},
       {:ex_doc,  ">= 0.0.0", only: :dev}
     ]
