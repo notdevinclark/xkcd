@@ -4,7 +4,7 @@ defmodule XkcdTest do
   alias Xkcd.Comic
 
   test "number gets a specific comic by it's number" do
-    retrieved_comic = %Comic{title: "Those Not Present", alt: "'Yeah, that squid's a total asshole.' [scoot scoot]", img: "http://imgs.xkcd.com/comics/those_not_present.png", num: 1176}
+    retrieved_comic = %Comic{title: "Those Not Present", alt: "'Yeah, that squid's a total asshole.' [scoot scoot]", img: "https://imgs.xkcd.com/comics/those_not_present.png", num: 1176}
     assert {:ok, ^retrieved_comic} = Xkcd.number(1176)
   end
 
